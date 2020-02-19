@@ -5,8 +5,24 @@ import sys
 # The cache parameter is here for if you want to implement
 # a solution that is more efficient than the naive 
 # recursive solution
-def eating_cookies(n, cache=None):
-  pass
+# def eating_cookies(n): 
+#   numbers = [1,2,3]
+#   remaining = len(numbers)
+#   cookie_count = 0
+
+#   for i in range(0, len(numbers)):
+#     current_total = []
+#     if sum(current_total) == n:
+#         cookie_count += 1
+
+#     for j in range(0, len(numbers)):
+  
+
+
+
+
+
+
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:

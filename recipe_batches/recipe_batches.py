@@ -8,7 +8,7 @@ def recipe_batches(recipe, ingredients):
   
   if len(ingredients) != len(recipe):
     return 0
-    
+
   difference = []
 
   for i in range(0, len(ingredients)):
@@ -29,7 +29,7 @@ def recipe_batches(recipe, ingredients):
     return ingredients[smallest_index] // recipe[smallest_index]
 
 
-print((recipe_batches({ 'milk': 2, 'sugar': 40, 'butter': 20 }, { 'milk': 5, 'sugar': 120, 'butter': 500 })))
+# print((recipe_batches({ 'milk': 2, 'sugar': 40, 'butter': 20 }, { 'milk': 5, 'sugar': 120, 'butter': 500 })))
 # print(recipe_batches({ 'milk': 100, 'butter': 50, 'cheese': 10 }, { 'milk': 198, 'butter': 52, 'cheese': 10 }))
 
 

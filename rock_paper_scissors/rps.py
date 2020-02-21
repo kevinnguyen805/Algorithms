@@ -2,23 +2,25 @@
 
 import sys
 
+
 def rock_paper_scissors(rounds):
-  # rock = ['rock']
-  # paper = ['paper']
-  # scissors = ['scissors']
-  plays = [['rock'], ['paper'], ['scissors']]
-  results = []
+  def get_plays(round):
+    result = []
+    moves = [['rock'],['paper'],['scissors']]
 
-  for i in range(0, rounds):
-    current_results = []
-    for j in range(0, rounds):
-      current_results += plays[j]
-    results.append(current_results)
+    for play in round:
+      for move in moves:
+        result.append(play + move)
+    
+    return result
+  
+  if rounds == 0:
+    return [[]]
+  if rounds == 1:
+    return [['rock'],['paper'],['scissors']]
+  
+  return get_plays(rock_paper_scissors(rounds-1))
 
-
-  return results 
-
-print(rock_paper_scissors(3))
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:

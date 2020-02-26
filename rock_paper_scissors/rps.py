@@ -2,8 +2,24 @@
 
 import sys
 
-def rock_paper_scissors(n):
-  pass 
+
+def rock_paper_scissors(rounds):
+  def get_plays(round):
+    result = []
+    moves = [['rock'],['paper'],['scissors']]
+
+    for play in round:
+      for move in moves:
+        result.append(play + move)
+    
+    return result
+  
+  if rounds == 0:
+    return [[]]
+  if rounds == 1:
+    return [['rock'],['paper'],['scissors']]
+  
+  return get_plays(rock_paper_scissors(rounds-1))
 
 
 if __name__ == "__main__":
